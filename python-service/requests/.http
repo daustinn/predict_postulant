@@ -1,0 +1,38 @@
+### PING REQUEST
+GET http://127.0.0.1:8000/api/ping HTTP/1.1
+
+### GET INDICATORS REQUEST
+GET http://127.0.0.1:8000/api/indicators HTTP/1.1
+
+### TRAIN MODEL REQUEST
+POST http://127.0.0.1:8000/api/train?indicator_id=desarrollador_web HTTP/1.1
+
+### TRAIN MODEL REQUEST
+POST http://127.0.0.1:8000/api/predict HTTP/1.1
+Content-Type: application/json
+
+{
+  "age": 22,
+  "years_of_experience": 5,
+  "certificates": 10,
+  "communication": 5,
+  "leadership": 4,
+  "teamwork": 4,
+  "adaptability": 5,
+  "punctuality": 5
+}
+
+### TRAIN MODEL REQUEST
+POST http://127.0.0.1:8000/api/predict HTTP/1.1
+Content-Type: application/json
+
+{
+  "age": 30,
+  "years_of_experience": 3,
+  "certificates": 2,
+  "communication": 3,
+  "leadership": 2,
+  "teamwork": 3,
+  "adaptability": 3,
+  "punctuality": 5
+}
