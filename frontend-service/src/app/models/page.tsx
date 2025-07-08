@@ -3,6 +3,9 @@ import { apihost } from "@/const";
 import axios from "axios";
 import React from "react";
 
+export const dynamic = "force-dynamic";
+export const fetchCache = "force-no-store";
+
 export default async function ModelsPage() {
   const { data: models } = await axios.get(apihost + "models");
 

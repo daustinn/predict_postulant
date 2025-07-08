@@ -4,73 +4,12 @@ import axios from "axios";
 import { UsersIcon } from "lucide-react";
 import React from "react";
 
+export const dynamic = "force-dynamic";
+export const fetchCache = "force-no-store";
+
 export default async function DashboardsPage() {
   const { data } = await axios.get(apihost + "dashboard");
-  // const data = {
-  //   models: 1,
-  //   analized: 39,
-  //   latest: [
-  //     {
-  //       name: "Zaira Iniesta Arcos",
-  //       profession: "Educación Inicial",
-  //       gender: "f",
-  //       years_of_experience: 29,
-  //       communication: 5,
-  //       teamwork: 1,
-  //       punctuality: 4,
-  //       suitable: 0,
-  //       updated_at: null,
-  //       id: 24,
-  //       study_level: "Universitario",
-  //       age: 64,
-  //       certificates: 1,
-  //       leadership: 4,
-  //       adaptability: 1,
-  //       probability: 0.04,
-  //       created_at: "2025-07-07T15:52:47",
-  //     },
-  //     {
-  //       name: "Rafa Guijarro-Sacristán",
-  //       profession: "Agronomía",
-  //       gender: "m",
-  //       years_of_experience: 11,
-  //       communication: 5,
-  //       teamwork: 5,
-  //       punctuality: 4,
-  //       suitable: 0,
-  //       updated_at: null,
-  //       id: 54,
-  //       study_level: "Técnico",
-  //       age: 32,
-  //       certificates: 4,
-  //       leadership: 4,
-  //       adaptability: 3,
-  //       probability: 12.28,
-  //       created_at: "2025-07-07T15:52:47",
-  //     },
-  //     {
-  //       name: "Rómulo Carnero Ayuso",
-  //       profession: "Diseño Gráfico",
-  //       gender: "m",
-  //       years_of_experience: 18,
-  //       communication: 4,
-  //       teamwork: 4,
-  //       punctuality: 3,
-  //       suitable: 1,
-  //       updated_at: null,
-  //       id: 22,
-  //       study_level: "Técnico",
-  //       age: 49,
-  //       certificates: 4,
-  //       leadership: 5,
-  //       adaptability: 5,
-  //       probability: 51.72,
-  //       created_at: "2025-07-07T15:52:47",
-  //     },
-  //   ],
-  //   fit_candidates: 3,
-  //   unfit_candidates: 36,
-  // };
+
   return (
     <div className="">
       <nav className="py-2 px-3 border-b">

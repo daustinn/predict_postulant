@@ -61,6 +61,10 @@ def train_model(data: ModelSchema):
         df_model["gender"] = df_model["gender"].map({"m": 1, "f": 0}).fillna(0)
         features.insert(1, "gender")
 
+    classes = df_model["Final Result"].unique()
+    if len(classes) < 2:
+        raise ValueError("The dataset does not contain enough classes for training.")
+
     X = df_model[features]
     y = df_model["Final Result"]
 
