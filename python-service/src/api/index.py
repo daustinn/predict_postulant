@@ -8,6 +8,9 @@ from src.api.dashboard import router as dashboard_router
 
 router = APIRouter()
 
+router.include_router(models_router)
+router.include_router(dashboard_router)
+
 @router.get("/ping")
 def ping():
     return {
@@ -27,6 +30,5 @@ def predict_file(
 ):
     return predict_candidate_file(file=file.file, model_id=model, threshold=threshold)
 
-router.include_router(models_router)
-router.include_router(dashboard_router)
+
 

@@ -40,6 +40,7 @@ def train_model(data: ModelSchema):
     }
 
     df = pd.read_excel("data/dataset.xlsx")
+    
     df_model = df.copy()
     df_model["Final Result"] = df_model.apply(lambda row: meets_indicators(row, indicators), axis=1)
 

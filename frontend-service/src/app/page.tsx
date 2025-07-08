@@ -11,8 +11,6 @@ export default async function Home() {
 
   async function predictCandidate(form: object) {
     "use server";
-
-    console.log(form);
     const { data } = await axios.post(apihost + "predictions", form);
     return data;
   }
